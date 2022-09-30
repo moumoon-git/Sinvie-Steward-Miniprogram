@@ -1,0 +1,89 @@
+@import "../common/index.wxss";
+
+.van-tooltip {
+	position: relative;
+}
+.van-tooltip__popper {
+	position: absolute;
+	z-index: 1000;
+	padding: 10px 0 10px 10px;
+	border-radius: 4px;
+	width: fit-content;
+	width: 150px;
+	font-size: 14px;
+}
+.van-tooltip__popper__dark {
+	background-color: #4a4a4a;
+	color: #fff;
+}
+
+.van-tooltip__popper__light {
+	background-color: #fff;
+	color: #606266;
+}
+
+.van-tooltip__popper .popper__arrow {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+}
+
+.van-tooltip__popper .popper__arrow__dark {
+	background-color: #4a4a4a;
+}
+
+.van-tooltip__popper .popper__arrow__light {
+	background-color: #fff;
+}
+
+.van-tooltip__popper__bottom {
+	left: 50%;
+	top: 120%;
+	transform: translateX(-50%);
+}
+
+.van-tooltip__popper__top {
+	left: 50%;
+	bottom: 120%;
+	transform: translateX(-50%);
+}
+
+.van-tooltip__popper__right {
+	left: 102%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.van-tooltip__popper__left {
+	right: 102%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.van-tooltip__popper .popper__arrow__bottom {
+	left: 50%;
+	top: 0;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	transform: translateY(-92%);
+}
+
+.van-tooltip__popper .popper__arrow__top {
+	left: 50%;
+	bottom: 0;
+	clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+	transform: translateY(92%);
+}
+
+.van-tooltip__popper .popper__arrow__right {
+	left: 0;
+	top: 50%;
+	clip-path: polygon(0 50%, 100% 100%, 100% 0);
+	transform: translate(-92%, -50%);
+}
+
+.van-tooltip__popper .popper__arrow__left {
+	right: 0;
+	top: 50%;
+	clip-path: polygon(100% 50%, 0 100%, 0 0);
+	transform: translate(92%, -50%);
+}

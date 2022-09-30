@@ -1,0 +1,16 @@
+
+
+  <view
+    class="van-tooltip"
+  >
+    <van-transition
+      show="{{ show }}"
+    >
+      <view class="van-tooltip__popper van-tooltip__popper__{{theme}} van-tooltip__popper__{{placement}}">
+        <text>{{value}}</text>
+        <view class="popper__arrow popper__arrow__{{theme}} popper__arrow__{{placement}}"></view>
+      </view>
+    </van-transition>
+    <slot catch:tap="onClickSource" />
+  </view>
+

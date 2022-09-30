@@ -1,0 +1,123 @@
+@import '../../../../assets/styles/common.less';
+
+.ProjectsLaborHoursItem {
+  width: 100vw;
+  min-height: 380rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-top: 32rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &--declare-again {
+    padding: 0;
+    margin: 0;
+  }
+
+  &-time {
+    margin-bottom: 35rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon-division {
+      width: 26rpx;
+      height: 36rpx;
+    }
+
+    .icon-division.reverse {
+      transform: rotate(180deg);
+    }
+
+    .fallInTime {
+      margin: 0 16rpx;
+    }
+  }
+
+  &__header {
+    height: 48rpx;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      overflow: hidden;
+
+      .project-index-bg {
+        width: 90rpx;
+        height: 30rpx;
+        position: relative;
+
+        &::after {
+          content: attr(data-project-index);
+          display: block;
+          position: absolute;
+          height: 30rpx;
+          line-height: 37rpx;
+          font-size: 22rpx;
+          font-family: YouSheBiaoTiHei;
+          color: #f4d57b;
+          top: 0;
+          left: 0;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .project-name {
+        font-size: 32rpx;
+        height: 48rpx;
+        line-height: 48rpx;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: bold;
+        color: #333333;
+        margin-left: 10rpx;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+        width: calc(100% - 90rpx);
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+
+      image {
+        width: 48rpx;
+        height: 48rpx;
+        margin: 0 23rpx;
+
+        &:hover {
+          background-color: #f8f8f8;
+          border-radius: 10rpx;
+        }
+      }
+    }
+  }
+
+  &__main {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .projectThirdTarget {
+      width: 100%;
+    }
+  }
+
+  .empty {
+    .empty();
+  }
+
+}

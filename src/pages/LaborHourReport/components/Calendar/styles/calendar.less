@@ -1,0 +1,180 @@
+.van-calendar__days {
+  // 未来
+  .future-day {
+    &>view {
+      border: 4rpx solid #999999;
+    }
+  }
+  
+  // 已退回
+  .returned-day {
+    &>view {
+      border: 4rpx solid #999999;
+    }
+    .van-calendar__selected-day {
+      background: #999999 !important;
+      color: #fff;
+    }
+  }
+
+  // 已反馈
+  .feedbacked-day {
+    &>view {
+      border: 4rpx solid #0bd295;
+    }
+    .van-calendar__selected-day {
+      background: #0bd295 !important;
+      color: #fff;
+    }
+  }
+
+  // 待反馈
+  .unfeedbacked-day {
+    &>view {
+      border: 4rpx solid #fdb428;
+    }
+    .van-calendar__selected-day {
+      background: #fdb428 !important;
+      color: #fff;
+    }
+  }
+
+  // 未申报
+  .undeclare-day {
+    &>view {
+      border: 4rpx solid #f66e6e;
+    }
+    .van-calendar__bottom-info {
+      color: #f66e6e;
+    }
+    .van-calendar__selected-day {
+      background: #f66e6e !important;
+      color: #fff;
+    }
+  }
+
+}
+
+.color-666 {
+  color: #666;
+}
+
+.calendar-title {
+  padding: 20rpx 0;
+  width: 100vw;
+  height: 48rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333333;
+  line-height: 48rpx;
+}
+
+.calendar-month {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  line-height: 40rpx;
+  margin: 10rpx 0 20rpx 0;
+
+  &>text {
+    margin: 0 42rpx;
+  }
+}
+
+.calendar-text-wrapper {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #fff;
+
+  .calendar-text {
+    width: 120rpx;
+    height: 36rpx;
+    text-align: right;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 36rpx;
+    display: flex;
+    align-items: center;
+
+    &--returned::before {
+      display: block;
+      content: '';
+      width: 15rpx;
+      height: 15rpx;
+      border-radius: 50%;
+      background: #999999;
+      margin-right: 20rpx;
+    }
+
+    &--feedbacked::before {
+      display: block;
+      content: '';
+      width: 15rpx;
+      height: 15rpx;
+      border-radius: 50%;
+      background: #0bd295;
+      margin-right: 20rpx;
+    }
+
+    &--unfeedbacked::before {
+      display: block;
+      content: '';
+      width: 15rpx;
+      height: 15rpx;
+      border-radius: 50%;
+      background: #fdb428;
+      margin-right: 20rpx;
+    }
+
+    &--undeclare::before {
+      display: block;
+      content: '';
+      width: 15rpx;
+      height: 15rpx;
+      border-radius: 50%;
+      background: #f66e6e;
+      margin-right: 20rpx;
+    }
+  }
+}
+
+.laborHourReport-calendar {
+  
+
+  .van-calendar__day {
+    &>view {
+      width: 70rpx !important;
+      height: 70rpx !important;
+      line-height: 70rpx !important;
+      border-radius: 50%;
+    }
+  }
+
+  .van-calendar__bottom-info {
+    bottom: 4rpx !important;
+    color: #333333;
+    font-size: 24rpx;
+  }
+
+  .van-calendar__day--disabled {
+    color: #666666;
+  }
+
+  .van-calendar__footer--safeAreaInsetBottom {
+    height: 140rpx;
+    padding-top: 20rpx !important;
+    button {
+      height: 100rpx !important;
+      font-size: 36rpx;
+    }
+  }
+  
+}

@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "types": ["@dcloudio/types", "miniprogram-api-typings", "mini-types"],
+    "allowJS": true, // 允许编译器编译JS，JSX文件
+    "checkJs": true // 允许在JS文件中报错，通常与allowJS一起使用
+  }
+}
